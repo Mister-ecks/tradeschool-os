@@ -1,0 +1,14 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1280" height="60" fill="#3b82f6"/>
+  <text x="640" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">
+    TradeSchool OS
+  </text>
+  <rect x="20" y="80" width="1240" height="200" fill="white" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+  <text x="640" y="360" text-anchor="middle" fill="#64748b" font-family="Arial" font-size="24">
+    Desktop Dashboard
+  </text>
+  <circle cx="640" cy="400" r="30" fill="#3b82f6" opacity="0.1"/>
+  <path d="M625 395L640 410L655 395" 
+        stroke="#3b82f6" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

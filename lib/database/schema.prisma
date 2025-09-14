@@ -1,0 +1,125 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  name      String
+  progress  Progress[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("students")
+}
+
+model Module {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  category    String   // "road-signs", "youth-repair", "vr-ar", "tool-recognition"
+  lessons     Lesson[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("modules")
+}
+
+model Lesson {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  moduleId    String    @db.ObjectId
+  module      Module    @relation(fields: [moduleId], references: [id])
+  title       String
+  description String
+  content     Json      // Flexible content structure
+  order       Int
+  quizzes     Quiz[]
+  progress    Progress[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("lessons")
+}
+
+model Quiz {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  lessonId  String   @db.ObjectId
+  lesson    Lesson   @relation(fields: [lessonId], references: [id])
+  questions Json     // Array of question objects
+  type      String   // "road-signs", "repair-skills", "tool-recognition"
+  attempts  Attempt[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("quizzes")
+}
+
+model Attempt {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  quizId    String   @db.ObjectId
+  quiz      Quiz     @relation(fields: [quizId], references: [id])
+  studentId String   @db.ObjectId
+  student   Student  @relation(fields: [studentId], references: [id])
+  answers   Json     // Student's answers
+  score     Float
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("attempts")
+}
+
+model Progress {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  studentId String   @db.ObjectId
+  student   Student  @relation(fields: [studentId], references: [id])
+  lessonId  String   @db.ObjectId
+  lesson    Lesson   @relation(fields: [lessonId], references: [id])
+  completed Boolean  @default(false)
+  score     Float?
+  data      Json?    // Additional progress data
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([studentId, lessonId])
+  @@map("progress")
+}
+
+model Tool {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  barcode     String   @unique
+  qrCode      String   @unique
+  name        String
+  description String
+  category    String   // "phone-repair", "laptop-repair", "general"
+  usage       String
+  safetyNotes String?
+  image       String?
+  lessons     Json?    // Related lesson IDs
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("tools")
+}
+
+model RoadSign {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String
+  meaning     String
+  category    String   // "regulatory", "warning", "mandatory"
+  image       String
+  importance  String   // "critical", "high", "medium"
+  questions   Json     // Quiz questions for this sign
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("road_signs")
+}
