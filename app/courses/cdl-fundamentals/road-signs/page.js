@@ -1,4 +1,4 @@
-import { RoadSignTraining } from '@/components/cdl/RoadSignTraining'
+import RoadSignTraining from '@/components/cdl/RoadSignTraining'
 
 export const metadata = {
   title: 'CDL Road Sign Training - Master Traffic Signs | TradeSchool OS',

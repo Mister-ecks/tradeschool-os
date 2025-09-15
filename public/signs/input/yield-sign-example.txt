@@ -1,0 +1,21 @@
+YIELD SIGN IMAGE DETECTED
+=========================
+
+Based on the image description provided:
+- Shape: Inverted equilateral triangle
+- Colors: Red outer area with white inner triangle
+- Border: White border around the red area
+- Background: Black background for contrast
+
+AUTOMATED PROCESSING:
+✅ Sign Type: YIELD (regulatory)
+✅ Filename: yield-sign.png
+✅ Category: regulatory
+✅ Destination: public/signs/regulatory/yield-sign.png
+
+This image would automatically:
+1. Be detected as a YIELD sign
+2. Be renamed to "yield-sign.png"
+3. Be placed in the regulatory folder
+4. Replace the generated CSS visual in the system
+

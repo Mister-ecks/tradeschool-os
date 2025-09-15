@@ -1,35 +1,43 @@
-## 📝 Pull Request
+# 🚀 Pull Request
 
-### Description
-Brief description of changes made.
+## 📋 Description
+Brief description of changes made in this PR.
 
-### Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Breaking change
-- [ ] Documentation update
-- [ ] Performance improvement
-- [ ] Code refactoring
-
-### Testing
-- [ ] Tests pass locally
-- [ ] New tests added (if applicable)
+## 🧪 Testing
+- [ ] All tests pass locally (`npm test`)
+- [ ] New tests added for new functionality
+- [ ] Existing tests updated if needed
 - [ ] Manual testing completed
 
-### Deployment
-- [ ] Ready for production deployment
-- [ ] Requires database migration
-- [ ] Environment variables updated
+## 📊 Test Coverage
+- [ ] Test coverage maintained or improved
+- [ ] No decrease in overall test coverage
+- [ ] New functionality has appropriate test coverage
 
-### Checklist
+## 🔍 Code Quality
 - [ ] Code follows project style guidelines
-- [ ] Self-review completed
-- [ ] Documentation updated
-- [ ] No console.log statements left
-- [ ] No commented code left
+- [ ] No console errors or warnings
+- [ ] Proper error handling implemented
+- [ ] Code is readable and well-documented
 
-### Screenshots
-If applicable, add screenshots to show the changes.
+## 🚀 Deployment
+- [ ] Changes are production-ready
+- [ ] No breaking changes introduced
+- [ ] Environment variables updated if needed
+- [ ] Database migrations included if applicable
 
-### Additional Notes
-Any additional information about the changes.
+## 📝 Checklist
+- [ ] PR description is clear and concise
+- [ ] All CI checks are passing
+- [ ] Code review completed
+- [ ] Documentation updated if needed
+- [ ] Version bumped if needed
+
+## 🎯 Related Issues
+Closes #[issue-number]
+
+## 📸 Screenshots (if applicable)
+Add screenshots to help explain your changes.
+
+## 🔗 Additional Notes
+Any additional information that reviewers should know.

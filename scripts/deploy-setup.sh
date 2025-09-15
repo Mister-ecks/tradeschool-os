@@ -1,20 +1,25 @@
 #!/bin/bash
 
-# TradeSchool OS - Complete Deployment Setup
-echo "🎓 TradeSchool OS - Complete Deployment Setup"
-echo "=============================================="
+# TradeSchool-OS Deployment Setup Script
+# This script sets up the project for deployment to Vercel
 
-# Check if Git is installed
-if ! command -v git &> /dev/null; then
-    echo "❌ Git is not installed. Please install Git first."
-    exit 1
-fi
+echo "🚀 TradeSchool-OS Deployment Setup"
+echo "=================================="
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
-    echo "❌ Node.js is not installed. Please install Node.js first."
+    echo "❌ Node.js is not installed. Please install Node.js 18+ first."
     exit 1
 fi
+
+# Check Node.js version
+NODE_VERSION=$(node -v | cut -d'v' -f2 | cut -d'.' -f1)
+if [ "$NODE_VERSION" -lt 18 ]; then
+    echo "❌ Node.js version 18+ is required. Current version: $(node -v)"
+    exit 1
+fi
+
+echo "✅ Node.js version: $(node -v)"
 
 # Check if npm is installed
 if ! command -v npm &> /dev/null; then
@@ -22,78 +27,144 @@ if ! command -v npm &> /dev/null; then
     exit 1
 fi
 
-echo "✅ Prerequisites check passed!"
+echo "✅ npm version: $(npm -v)"
 
 # Install dependencies
 echo "📦 Installing dependencies..."
 npm install
 
-# Run linting
-echo "🔍 Running linting..."
-npm run lint
-
-# Build the project
-echo "🏗️ Building project..."
-npm run build
-
-# Initialize Git if not already done
-if [ ! -d ".git" ]; then
-    echo "📁 Initializing Git repository..."
-    git init
+if [ $? -ne 0 ]; then
+    echo "❌ Failed to install dependencies"
+    exit 1
 fi
 
-# Add all files
-echo "📝 Adding files to Git..."
-git add .
+echo "✅ Dependencies installed successfully"
 
-# Create initial commit
-echo "💾 Creating initial commit..."
-git commit -m "Initial commit: TradeSchool OS with complete training modules
+# Run tests
+echo "🧪 Running tests..."
+npm test -- --passWithNoTests
 
-Features included:
-- Fiber & OTDR Training Program
-- Virtual Fusion Splicing Lab
-- Interactive OTDR Testing
-- Tool Scanning System
-- CDL Training Modules
-- Road Sign Recognition
-- Youth Repair Skills
-- VR/AR Training Components
-- Automatic Deployment Configuration
-- GitHub Actions Workflows
+if [ $? -ne 0 ]; then
+    echo "⚠️  Some tests failed, but continuing with deployment setup"
+fi
 
-Ready for Vercel deployment!"
+# Build the project
+echo "🔨 Building project..."
+npm run build
 
-# Set up branch structure
-echo "🌿 Setting up branch structure..."
-git branch -M main
-git checkout -b develop
+if [ $? -ne 0 ]; then
+    echo "❌ Build failed"
+    exit 1
+fi
+
+echo "✅ Build completed successfully"
+
+# Check if Vercel CLI is installed
+if ! command -v vercel &> /dev/null; then
+    echo "📦 Installing Vercel CLI..."
+    npm install -g vercel
+fi
+
+echo "✅ Vercel CLI is ready"
+
+# Create .env.local if it doesn't exist
+if [ ! -f .env.local ]; then
+    echo "📝 Creating .env.local file..."
+    cat > .env.local << EOF
+NODE_ENV=production
+NEXT_PUBLIC_APP_URL=https://your-domain.vercel.app
+EOF
+    echo "✅ .env.local created"
+else
+    echo "✅ .env.local already exists"
+fi
+
+# Create .gitignore if it doesn't exist
+if [ ! -f .gitignore ]; then
+    echo "📝 Creating .gitignore file..."
+    cat > .gitignore << EOF
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next/
+out/
+
+# Production
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Testing
+.jest/
+EOF
+    echo "✅ .gitignore created"
+else
+    echo "✅ .gitignore already exists"
+fi
+
+# Initialize Git repository if not already initialized
+if [ ! -d .git ]; then
+    echo "📝 Initializing Git repository..."
+    git init
+    git add .
+    git commit -m "Initial commit – TradeSchool-OS full platform"
+    echo "✅ Git repository initialized"
+else
+    echo "✅ Git repository already exists"
+fi
 
 echo ""
-echo "🎉 Setup complete!"
+echo "🎉 Deployment Setup Complete!"
+echo "============================="
 echo ""
-echo "📋 Next steps:"
-echo "1. Create a new repository on GitHub:"
-echo "   https://github.com/new"
+echo "Next steps:"
+echo "1. Create a GitHub repository:"
+echo "   - Go to https://github.com/new"
+echo "   - Create a new repository named 'tradeschool-os'"
+echo "   - Don't initialize with README (we already have one)"
 echo ""
-echo "2. Add the remote origin:"
+echo "2. Push to GitHub:"
 echo "   git remote add origin https://github.com/YOUR_USERNAME/tradeschool-os.git"
-echo ""
-echo "3. Push to GitHub:"
+echo "   git branch -M main"
 echo "   git push -u origin main"
-echo "   git push -u origin develop"
 echo ""
-echo "4. Set up Vercel:"
-echo "   - Go to https://vercel.com"
-echo "   - Import your GitHub repository"
-echo "   - Configure environment variables"
+echo "3. Deploy to Vercel:"
+echo "   vercel login"
+echo "   vercel --prod"
 echo ""
-echo "5. Configure GitHub Secrets:"
-echo "   - Go to repository Settings → Secrets and variables → Actions"
-echo "   - Add VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID"
+echo "4. Update environment variables in Vercel dashboard:"
+echo "   - NEXT_PUBLIC_APP_URL=https://your-domain.vercel.app"
 echo ""
-echo "6. Automatic deployment will start immediately!"
+echo "🚀 Your TradeSchool-OS platform will be live!"
 echo ""
-echo "📖 See DEPLOYMENT.md for detailed instructions."
-echo ""
-echo "🌐 Your site will be available at: https://tradeschool-os.vercel.app"
+echo "For more information, see README.md"

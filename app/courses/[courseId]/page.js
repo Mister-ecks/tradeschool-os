@@ -1,4 +1,4 @@
-import { CourseDetail } from '@/components/courses/CourseDetail'
+import CourseDetail from '@/components/courses/CourseDetail'
 import { notFound } from 'next/navigation'
 import { hvacCompleteModules, courseStatistics, hvacFinalExam } from '@/data/hvac-complete-modules'
 import { cdlCompleteModules } from '@/data/cdl-complete-modules'

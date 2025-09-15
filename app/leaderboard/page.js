@@ -1,4 +1,4 @@
-import { Leaderboard } from '@/components/leaderboard/Leaderboard'
+import Leaderboard from '@/components/leaderboard/Leaderboard'
 
 export const metadata = {
   title: 'Leaderboard - TradeSchool OS',

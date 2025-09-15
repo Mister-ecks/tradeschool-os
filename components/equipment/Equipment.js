@@ -448,5 +448,7 @@ export function Equipment() {
   )
 }
 
+export default Equipment
+
 
 

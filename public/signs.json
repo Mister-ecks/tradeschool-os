@@ -1,0 +1,706 @@
+[
+  {
+    "id": "stop",
+    "category": "Regulatory",
+    "name": "STOP",
+    "meaning": "Full stop at line/crosswalk/intersection, yield before proceeding.",
+    "image": "/signs/stop.png",
+    "quiz": [
+      {
+        "question": "What shape is a STOP sign?",
+        "options": ["Circle", "Triangle", "Octagon", "Rectangle"],
+        "answer": "Octagon"
+      }
+    ]
+  },
+  {
+    "id": "yield",
+    "category": "Regulatory",
+    "name": "YIELD",
+    "meaning": "Slow down, prepare to stop, give way to other traffic/pedestrians.",
+    "image": "/signs/yield.png",
+    "quiz": [
+      {
+        "question": "What should you do at a YIELD sign?",
+        "options": ["Stop completely", "Speed up", "Slow down and give way", "Ignore"],
+        "answer": "Slow down and give way"
+      }
+    ]
+  },
+  {
+    "id": "speed-limit",
+    "category": "Regulatory",
+    "name": "Speed Limit",
+    "meaning": "Maximum legal speed on that stretch of road.",
+    "image": "/signs/speed-limit-80.png",
+    "quiz": [
+      {
+        "question": "A speed limit sign indicates:",
+        "options": ["Recommended speed", "Maximum legal speed", "Minimum speed", "Average speed"],
+        "answer": "Maximum legal speed"
+      }
+    ]
+  },
+  {
+    "id": "no-entry",
+    "category": "Regulatory",
+    "name": "No Entry",
+    "meaning": "Do not enter roadway beyond this sign.",
+    "image": "/signs/no-entry.png",
+    "quiz": [
+      {
+        "question": "What does a No Entry sign mean?",
+        "options": ["Pedestrians only", "No vehicles beyond this point", "One-way street", "Parking allowed"],
+        "answer": "No vehicles beyond this point"
+      }
+    ]
+  },
+  {
+    "id": "one-way",
+    "category": "Regulatory",
+    "name": "One Way",
+    "meaning": "Traffic allowed only in the direction shown.",
+    "image": "/signs/one-way.png",
+    "quiz": [
+      {
+        "question": "A One Way sign means:",
+        "options": ["Traffic can move in both directions", "Traffic allowed only in the arrow direction", "No passing zone", "Roundabout ahead"],
+        "answer": "Traffic allowed only in the arrow direction"
+      }
+    ]
+  },
+  {
+    "id": "no-parking",
+    "category": "Regulatory",
+    "name": "No Parking",
+    "meaning": "You may stop temporarily but not park.",
+    "image": "/signs/no-parking.png",
+    "quiz": [
+      {
+        "question": "What does a No Parking sign mean?",
+        "options": ["You can never stop", "You may stop temporarily but not park", "You can park at night only", "Parking allowed weekends"],
+        "answer": "You may stop temporarily but not park"
+      }
+    ]
+  },
+  {
+    "id": "no-stopping",
+    "category": "Regulatory",
+    "name": "No Stopping",
+    "meaning": "Do not stop at all, even temporarily.",
+    "image": "/signs/no-stopping.png",
+    "quiz": [
+      {
+        "question": "A No Stopping sign means:",
+        "options": ["You can park briefly", "Do not stop at all", "Stopping only for buses", "Stop only at night"],
+        "answer": "Do not stop at all"
+      }
+    ]
+  },
+  {
+    "id": "no-left-turn",
+    "category": "Regulatory",
+    "name": "No Left Turn",
+    "meaning": "Left turns prohibited.",
+    "image": "/signs/no-left-turn.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Left turns prohibited", "Right turns prohibited", "U-turn prohibited", "Roundabout"],
+        "answer": "Left turns prohibited"
+      }
+    ]
+  },
+  {
+    "id": "no-right-turn",
+    "category": "Regulatory",
+    "name": "No Right Turn",
+    "meaning": "Right turns prohibited.",
+    "image": "/signs/no-right-turn.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Right turns prohibited", "Left turns prohibited", "No entry", "No parking"],
+        "answer": "Right turns prohibited"
+      }
+    ]
+  },
+  {
+    "id": "do-not-pass",
+    "category": "Regulatory",
+    "name": "Do Not Pass",
+    "meaning": "Passing is prohibited beyond this point.",
+    "image": "/signs/do-not-pass.png",
+    "quiz": [
+      {
+        "question": "A Do Not Pass sign means:",
+        "options": ["Passing prohibited beyond this point", "No stopping allowed", "Left lane must turn left", "Keep right"],
+        "answer": "Passing prohibited beyond this point"
+      }
+    ]
+  },
+
+  {
+    "id": "curve-ahead",
+    "category": "Warning",
+    "name": "Curve Ahead",
+    "meaning": "Road bends left or right.",
+    "image": "/signs/curve-ahead.png",
+    "quiz": [
+      {
+        "question": "What does a Curve Ahead sign indicate?",
+        "options": ["Straight road", "Road bends left or right", "Sharp turn only", "Construction zone"],
+        "answer": "Road bends left or right"
+      }
+    ]
+  },
+  {
+    "id": "winding-road",
+    "category": "Warning",
+    "name": "Winding Road",
+    "meaning": "Series of curves ahead.",
+    "image": "/signs/winding-road.png",
+    "quiz": [
+      {
+        "question": "What does a Winding Road sign warn of?",
+        "options": ["Series of curves ahead", "Steep hill", "Slippery road", "Construction"],
+        "answer": "Series of curves ahead"
+      }
+    ]
+  },
+  {
+    "id": "steep-hill",
+    "category": "Warning",
+    "name": "Steep Hill",
+    "meaning": "Prepare for downhill or uphill slope.",
+    "image": "/signs/steep-hill.png",
+    "quiz": [
+      {
+        "question": "This sign warns of:",
+        "options": ["Flat road", "Steep hill ahead", "Detour", "Parking zone"],
+        "answer": "Steep hill ahead"
+      }
+    ]
+  },
+  {
+    "id": "slippery",
+    "category": "Warning",
+    "name": "Slippery When Wet",
+    "meaning": "Road may be slippery in wet conditions.",
+    "image": "/signs/slippery.png",
+    "quiz": [
+      {
+        "question": "This sign warns that the road:",
+        "options": ["Is always icy", "May be slippery when wet", "Is under construction", "Is a bike lane"],
+        "answer": "May be slippery when wet"
+      }
+    ]
+  },
+  {
+    "id": "road-narrows",
+    "category": "Warning",
+    "name": "Road Narrows",
+    "meaning": "Road width decreases ahead.",
+    "image": "/signs/road-narrows.png",
+    "quiz": [
+      {
+        "question": "Road Narrows means:",
+        "options": ["Bridge ahead", "Road width decreases ahead", "Tunnel ahead", "Construction detour"],
+        "answer": "Road width decreases ahead"
+      }
+    ]
+  },
+  {
+    "id": "divided-begins",
+    "category": "Warning",
+    "name": "Divided Highway Begins",
+    "meaning": "Traffic separates with median.",
+    "image": "/signs/divided-highway-begins.png",
+    "quiz": [
+      {
+        "question": "Divided Highway Begins means:",
+        "options": ["Road merges", "Traffic separates with median", "Lane closed", "One way only"],
+        "answer": "Traffic separates with median"
+      }
+    ]
+  },
+  {
+    "id": "divided-ends",
+    "category": "Warning",
+    "name": "Divided Highway Ends",
+    "meaning": "Lanes rejoin into undivided roadway.",
+    "image": "/signs/divided-highway-ends.png",
+    "quiz": [
+      {
+        "question": "Divided Highway Ends means:",
+        "options": ["Lanes rejoin into undivided roadway", "Bridge ahead", "Two-way traffic ends", "Construction zone"],
+        "answer": "Lanes rejoin into undivided roadway"
+      }
+    ]
+  },
+  {
+    "id": "pedestrian-crossing",
+    "category": "Warning",
+    "name": "Pedestrian Crossing",
+    "meaning": "Watch for people crossing.",
+    "image": "/signs/pedestrian-crossing.png",
+    "quiz": [
+      {
+        "question": "What does this sign indicate?",
+        "options": ["Zoo area", "Pedestrian crossing ahead", "Animal crossing", "Playground"],
+        "answer": "Pedestrian crossing ahead"
+      }
+    ]
+  },
+  {
+    "id": "school-zone",
+    "category": "Warning",
+    "name": "School Zone Ahead",
+    "meaning": "Children crossing likely, reduce speed.",
+    "image": "/signs/school-zone.png",
+    "quiz": [
+      {
+        "question": "A School Zone sign means:",
+        "options": ["Playground only", "Children crossing likely, reduce speed", "Highway exit", "Bus stop"],
+        "answer": "Children crossing likely, reduce speed"
+      }
+    ]
+  },
+  {
+    "id": "deer-crossing",
+    "category": "Warning",
+    "name": "Deer Crossing",
+    "meaning": "Animals may cross, drive carefully.",
+    "image": "/signs/deer-crossing.png",
+    "quiz": [
+      {
+        "question": "A Deer Crossing sign means:",
+        "options": ["Farm nearby", "Animals may cross, drive carefully", "Zoo ahead", "Scenic route"],
+        "answer": "Animals may cross, drive carefully"
+      }
+    ]
+  },
+
+  {
+    "id": "highway-route",
+    "category": "Guide",
+    "name": "Highway Route Marker",
+    "meaning": "Indicates numbered highway.",
+    "image": "/signs/highway-route.png",
+    "quiz": [
+      {
+        "question": "Highway route markers indicate:",
+        "options": ["Scenic trail", "Indicates numbered highway", "Hospital nearby", "Exit"],
+        "answer": "Indicates numbered highway"
+      }
+    ]
+  },
+  {
+    "id": "hospital",
+    "category": "Guide",
+    "name": "Hospital",
+    "meaning": "Emergency medical services nearby.",
+    "image": "/signs/hospital.svg",
+    "quiz": [
+      {
+        "question": "A blue H sign indicates:",
+        "options": ["Hotel", "Hospital nearby", "Highway", "Helipad"],
+        "answer": "Hospital nearby"
+      }
+    ]
+  },
+  {
+    "id": "gas-station",
+    "category": "Guide",
+    "name": "Gas Station",
+    "meaning": "Fuel services available ahead.",
+    "image": "/signs/gas.png",
+    "quiz": [
+      {
+        "question": "A gas station sign means:",
+        "options": ["Service centre", "Fuel services available ahead", "Hospital nearby", "Rest area"],
+        "answer": "Fuel services available ahead"
+      }
+    ]
+  },
+  {
+    "id": "rest-area",
+    "category": "Guide",
+    "name": "Rest Area",
+    "meaning": "Parking, toilets, rest stop ahead.",
+    "image": "/signs/rest-area.svg",
+    "quiz": [
+      {
+        "question": "This sign indicates:",
+        "options": ["Scenic lookout", "Rest area ahead", "Hospital nearby", "Exit"],
+        "answer": "Rest area ahead"
+      }
+    ]
+  },
+  {
+    "id": "airport",
+    "category": "Guide",
+    "name": "Airport",
+    "meaning": "Nearby airport or airfield.",
+    "image": "/signs/airport.png",
+    "quiz": [
+      {
+        "question": "An airplane symbol means:",
+        "options": ["Scenic lookout", "Airport nearby", "Helipad only", "Hospital"],
+        "answer": "Airport nearby"
+      }
+    ]
+  },
+  {
+    "id": "provincial-park",
+    "category": "Guide",
+    "name": "Provincial Park",
+    "meaning": "Entrance to a park or recreation area.",
+    "image": "/signs/park.png",
+    "quiz": [
+      {
+        "question": "This sign indicates:",
+        "options": ["Provincial park entrance", "Hospital", "Detour", "Exit"],
+        "answer": "Provincial park entrance"
+      }
+    ]
+  },
+  {
+    "id": "exit",
+    "category": "Guide",
+    "name": "Exit Sign",
+    "meaning": "Marks exit from highway.",
+    "image": "/signs/exit.png",
+    "quiz": [
+      {
+        "question": "Exit signs are usually:",
+        "options": ["Green", "Blue", "Orange", "Red"],
+        "answer": "Green"
+      }
+    ]
+  },
+  {
+    "id": "distance",
+    "category": "Guide",
+    "name": "Distance/Direction Sign",
+    "meaning": "Shows towns/cities and distances.",
+    "image": "/signs/distance.png",
+    "quiz": [
+      {
+        "question": "Distance signs show:",
+        "options": ["Speed limits", "Towns/cities and distances", "Parking rules", "Highway numbers"],
+        "answer": "Towns/cities and distances"
+      }
+    ]
+  },
+  {
+    "id": "service-centre",
+    "category": "Guide",
+    "name": "Service Centre",
+    "meaning": "Food, fuel, lodging at service stop.",
+    "image": "/signs/service.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Rest area only", "Service centre with food, fuel, lodging", "Hospital", "Airport"],
+        "answer": "Service centre with food, fuel, lodging"
+      }
+    ]
+  },
+  {
+    "id": "ferry",
+    "category": "Guide",
+    "name": "Ferry",
+    "meaning": "Ferry terminal ahead.",
+    "image": "/signs/ferry.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Bridge", "Ferry terminal ahead", "Boat ramp", "Scenic lookout"],
+        "answer": "Ferry terminal ahead"
+      }
+    ]
+  },
+
+  {
+    "id": "school-crossing",
+    "category": "School",
+    "name": "School Crossing",
+    "meaning": "Children cross, crossing guard may be present.",
+    "image": "/signs/school-crossing.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Playground", "School crossing", "Pedestrian mall", "Zoo"],
+        "answer": "School crossing"
+      }
+    ]
+  },
+  {
+    "id": "playground",
+    "category": "School",
+    "name": "Playground Area",
+    "meaning": "Watch for children playing, reduce speed.",
+    "image": "/signs/playground.png",
+    "quiz": [
+      {
+        "question": "A Playground sign warns of:",
+        "options": ["Children playing nearby", "School crossing", "Construction", "Animal crossing"],
+        "answer": "Children playing nearby"
+      }
+    ]
+  },
+  {
+    "id": "pedestrian-signal",
+    "category": "School",
+    "name": "Pedestrian Signal",
+    "meaning": "Obey pedestrian crossing lights.",
+    "image": "/signs/pedestrian-signal.png",
+    "quiz": [
+      {
+        "question": "Pedestrian signal signs mean:",
+        "options": ["Ignore walk signals", "Obey pedestrian crossing lights", "Cross anytime", "Jaywalk allowed"],
+        "answer": "Obey pedestrian crossing lights"
+      }
+    ]
+  },
+  {
+    "id": "school-speed",
+    "category": "School",
+    "name": "Reduced Speed in School Zone",
+    "meaning": "Lower maximum speed during school hours.",
+    "image": "/signs/school-speed.png",
+    "quiz": [
+      {
+        "question": "A Reduced Speed in School Zone sign means:",
+        "options": ["Maintain highway speed", "Lower speed during school hours", "No entry", "Stop for buses only"],
+        "answer": "Lower speed during school hours"
+      }
+    ]
+  },
+  {
+    "id": "bicycle-crossing",
+    "category": "School",
+    "name": "Bicycle Crossing",
+    "meaning": "Cyclists may cross.",
+    "image": "/signs/bicycle-crossing.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Cyclists may cross", "No bikes allowed", "Bike lane only", "Trail ahead"],
+        "answer": "Cyclists may cross"
+      }
+    ]
+  },
+  {
+    "id": "multi-use",
+    "category": "School",
+    "name": "Multi-Use Trail Crossing",
+    "meaning": "Pedestrians + cyclists may cross.",
+    "image": "/signs/multi-use.png",
+    "quiz": [
+      {
+        "question": "Multi-use trail crossings mean:",
+        "options": ["Cars only", "Pedestrians + cyclists may cross", "Buses only", "Animal trail"],
+        "answer": "Pedestrians + cyclists may cross"
+      }
+    ]
+  },
+  {
+    "id": "crosswalk",
+    "category": "School",
+    "name": "Pedestrian Crosswalk",
+    "meaning": "Stop for pedestrians at crosswalk.",
+    "image": "/signs/crosswalk.png",
+    "quiz": [
+      {
+        "question": "Pedestrian crosswalk signs mean:",
+        "options": ["Stop for pedestrians at crosswalk", "Cars have right of way", "Ignore pedestrians", "Only for cyclists"],
+        "answer": "Stop for pedestrians at crosswalk"
+      }
+    ]
+  },
+  {
+    "id": "school-bus",
+    "category": "School",
+    "name": "School Bus Stop Ahead",
+    "meaning": "Watch for buses loading/unloading children.",
+    "image": "/signs/school-bus.png",
+    "quiz": [
+      {
+        "question": "A School Bus Stop Ahead sign means:",
+        "options": ["Ignore buses", "Watch for buses loading/unloading children", "No parking zone", "Playground nearby"],
+        "answer": "Watch for buses loading/unloading children"
+      }
+    ]
+  },
+  {
+    "id": "disabled",
+    "category": "School",
+    "name": "Watch for Disabled Pedestrians",
+    "meaning": "Be cautious for wheelchair users.",
+    "image": "/signs/disabled.png",
+    "quiz": [
+      {
+        "question": "This sign means:",
+        "options": ["Parking only", "Be cautious for wheelchair users", "Hospital zone", "School zone"],
+        "answer": "Be cautious for wheelchair users"
+      }
+    ]
+  },
+  {
+    "id": "shared-roadway",
+    "category": "School",
+    "name": "Shared Roadway with Cyclists",
+    "meaning": "Watch for cyclists sharing the lane.",
+    "image": "/signs/shared-roadway.png",
+    "quiz": [
+      {
+        "question": "Shared roadway signs mean:",
+        "options": ["Cyclists not allowed", "Watch for cyclists sharing the lane", "Pedestrian zone", "Motorcycles only"],
+        "answer": "Watch for cyclists sharing the lane"
+      }
+    ]
+  },
+
+  {
+    "id": "flag-person",
+    "category": "Construction",
+    "name": "Flag Person Ahead",
+    "meaning": "Stop/slow signs controlled by worker.",
+    "image": "/signs/flag-person.png",
+    "quiz": [
+      {
+        "question": "What does an orange sign with a worker holding a flag mean?",
+        "options": ["Worker ahead, speed up", "Flag person controls traffic", "Traffic lights broken", "Detour ends"],
+        "answer": "Flag person controls traffic"
+      }
+    ]
+  },
+  {
+    "id": "detour",
+    "category": "Construction",
+    "name": "Detour",
+    "meaning": "Alternate route indicated.",
+    "image": "/signs/detour.png",
+    "quiz": [
+      {
+        "question": "An orange sign with 'Detour' means:",
+        "options": ["Road closed, follow alternate route", "Construction ends", "Parking only", "Service area"],
+        "answer": "Road closed, follow alternate route"
+      }
+    ]
+  },
+  {
+    "id": "no-u-turn",
+    "category": "Regulatory",
+    "name": "No U-Turn",
+    "meaning": "U-turns are prohibited at this location.",
+    "image": "/signs/no-u-turn.svg",
+    "quiz": [
+      {
+        "question": "What does a 'No U-Turn' sign mean?",
+        "options": ["U-turns allowed", "U-turns prohibited", "Turn left only", "Turn right only"],
+        "answer": "U-turns prohibited"
+      }
+    ]
+  },
+  {
+    "id": "truck-route",
+    "category": "Guide",
+    "name": "Truck Route",
+    "meaning": "Designated route for trucks and commercial vehicles.",
+    "image": "/signs/truck-route.svg",
+    "quiz": [
+      {
+        "question": "A 'Truck Route' sign indicates:",
+        "options": ["Trucks prohibited", "Designated route for trucks", "Truck parking only", "Truck service area"],
+        "answer": "Designated route for trucks"
+      }
+    ]
+  },
+  {
+    "id": "hospital",
+    "category": "Guide",
+    "name": "Hospital",
+    "meaning": "Hospital facility ahead.",
+    "image": "/signs/hospital.svg",
+    "quiz": [
+      {
+        "question": "A blue sign with 'H' indicates:",
+        "options": ["Highway", "Hospital", "Hotel", "Hazard"],
+        "answer": "Hospital"
+      }
+    ]
+  },
+  {
+    "id": "gas-station",
+    "category": "Guide",
+    "name": "Gas Station",
+    "meaning": "Gas station services available ahead.",
+    "image": "/signs/gas-station.svg",
+    "quiz": [
+      {
+        "question": "A blue sign with a gas pump indicates:",
+        "options": ["Gas station ahead", "No gas available", "Gas leak warning", "Gas storage area"],
+        "answer": "Gas station ahead"
+      }
+    ]
+  },
+  {
+    "id": "rest-area",
+    "category": "Guide",
+    "name": "Rest Area",
+    "meaning": "Rest area with facilities ahead.",
+    "image": "/signs/rest-area.svg",
+    "quiz": [
+      {
+        "question": "A blue sign with a picnic table indicates:",
+        "options": ["Rest area ahead", "No stopping", "Picnic area only", "Camping area"],
+        "answer": "Rest area ahead"
+      }
+    ]
+  },
+  {
+    "id": "merge-left",
+    "category": "Warning",
+    "name": "Merge Left",
+    "meaning": "Traffic from right lane will merge left.",
+    "image": "/signs/merge-left.svg",
+    "quiz": [
+      {
+        "question": "A yellow 'Merge Left' sign means:",
+        "options": ["Traffic merges from right", "Traffic merges from left", "No merging allowed", "Merge right only"],
+        "answer": "Traffic merges from right"
+      }
+    ]
+  },
+  {
+    "id": "lane-ends",
+    "category": "Warning",
+    "name": "Lane Ends",
+    "meaning": "Right lane ends ahead, merge left.",
+    "image": "/signs/lane-ends.svg",
+    "quiz": [
+      {
+        "question": "A yellow 'Lane Ends' sign means:",
+        "options": ["Lane begins ahead", "Lane ends, merge left", "No lane changes", "Lane closed permanently"],
+        "answer": "Lane ends, merge left"
+      }
+    ]
+  },
+  {
+    "id": "t-intersection",
+    "category": "Warning",
+    "name": "T-Intersection",
+    "meaning": "Road ahead ends at T-intersection.",
+    "image": "/signs/t-intersection.svg",
+    "quiz": [
+      {
+        "question": "A yellow 'T-Intersection' sign means:",
+        "options": ["Road ends at T-intersection", "Tunnel ahead", "Traffic light ahead", "Turn around"],
+        "answer": "Road ends at T-intersection"
+      }
+    ]
+  }
+]

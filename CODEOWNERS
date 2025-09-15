@@ -1,0 +1,33 @@
+# Code Owners
+# This file defines who is responsible for different parts of the codebase
+
+# Global owners
+* @your-username
+
+# Core application files
+/app/ @your-username
+/components/ @your-username
+/lib/ @your-username
+/pages/ @your-username
+
+# Test files
+/__tests__/ @your-username
+/jest.config.js @your-username
+/jest.setup.js @your-username
+
+# Configuration files
+/next.config.js @your-username
+/vercel.json @your-username
+/package.json @your-username
+/tailwind.config.js @your-username
+
+# Documentation
+/README.md @your-username
+/CHANGELOG.md @your-username
+/RELEASE_NOTES.md @your-username
+
+# GitHub Actions
+/.github/ @your-username
+
+# Environment and secrets
+/.env* @your-username

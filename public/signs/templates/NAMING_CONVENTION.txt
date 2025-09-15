@@ -1,0 +1,57 @@
+ROAD SIGNS IMAGE NAMING CONVENTION
+====================================
+
+Use these EXACT filenames when adding images to the system:
+
+REGULATORY SIGNS (place in regulatory/ folder):
+- stop-sign.png
+- yield-sign.png
+- speed-limit.png
+- no-entry.png
+- one-way.png
+- no-parking.png
+- no-stopping.png
+- no-left-turn.png
+- no-right-turn.png
+- do-not-pass.png
+
+WARNING SIGNS (place in warning/ folder):
+- curve-ahead.png
+- winding-road.png
+- steep-hill.png
+- slippery-when-wet.png
+- road-narrows.png
+- deer-crossing.png
+- pedestrian-crossing.png
+- school-zone-ahead.png
+- railway-crossing.png
+- low-clearance.png
+
+GUIDE & INFORMATION SIGNS (place in guide/ folder):
+- hospital.png
+- gas-station.png
+- rest-area.png
+- exit-sign.png
+- service-centre.png
+
+SCHOOL & PEDESTRIAN SIGNS (place in school/ folder):
+- Add school-related signs here as needed
+
+TEMPORARY/CONSTRUCTION SIGNS (place in temporary/ folder):
+- Add construction signs here as needed
+
+FILE FORMATS ACCEPTED:
+- .png (recommended for transparency)
+- .jpg
+- .gif
+
+RECOMMENDED IMAGE SIZE:
+- 256x256 pixels
+- 512x512 pixels (for high resolution)
+
+IMPORTANT:
+- Use lowercase letters and hyphens only
+- No spaces in filenames
+- Match the exact sign ID from the system
+- Images will automatically replace the generated CSS visuals
+

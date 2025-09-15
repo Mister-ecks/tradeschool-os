@@ -1,18 +1,20 @@
-import RoadSignModule from '@/components/modules/road-signs/RoadSignModule'
+import RoadSignQuiz from '@/components/modules/road-signs/RoadSignQuiz'
 
 export const metadata = {
-  title: 'Road Signs Training - TradeSchool OS',
-  description: 'Master traffic signs for safe driving with interactive study and quiz modes. Learn regulatory, warning, and mandatory signs with comprehensive training.',
-  keywords: 'road signs, traffic signs, driving training, CDL, regulatory signs, warning signs',
+  title: 'Road Signs Learning Module - TradeSchool OS',
+  description: 'Master Ontario road signs with interactive flashcards and quizzes. Learn regulatory, warning, guide, school, and construction signs with comprehensive training.',
+  keywords: 'road signs, traffic signs, driving training, CDL, regulatory signs, warning signs, Ontario road signs, flashcards',
   openGraph: {
-    title: 'Road Signs Training - TradeSchool OS',
-    description: 'Interactive road sign training with study and quiz modes',
+    title: 'Road Signs Learning Module - TradeSchool OS',
+    description: 'Interactive road sign learning with flashcards and quizzes',
     type: 'website',
   },
 }
 
 export default function RoadSignsPage() {
-  const studentId = 'student-123'; // In production, get from authentication
-
-  return <RoadSignModule studentId={studentId} />
+  return (
+    <main className="min-h-screen bg-gray-50">
+      <RoadSignQuiz />
+    </main>
+  )
 }

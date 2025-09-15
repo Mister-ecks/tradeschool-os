@@ -1,4 +1,4 @@
-import { Equipment } from '@/components/equipment/Equipment'
+import Equipment from '@/components/equipment/Equipment'
 
 export const metadata = {
   title: 'Equipment - TradeSchool OS',

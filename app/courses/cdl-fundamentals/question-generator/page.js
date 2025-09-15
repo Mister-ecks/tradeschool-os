@@ -1,4 +1,4 @@
-import { QuestionGenerator } from '@/components/cdl/QuestionGenerator'
+import QuestionGenerator from '@/components/cdl/QuestionGenerator'
 
 export const metadata = {
   title: 'CDL Question Generator - Create Custom Quizzes | TradeSchool OS',

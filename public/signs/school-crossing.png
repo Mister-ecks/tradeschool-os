@@ -1,0 +1,13 @@
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f0fdf4" stroke="#86efac" stroke-width="2" rx="8"/>
+  <text x="100" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">
+    SCHOOL CROSSING
+  </text>
+  <text x="100" y="110" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">
+    Placeholder Image
+  </text>
+  <text x="100" y="130" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="8" fill="#16a34a">
+    Replace with actual sign
+  </text>
+</svg>

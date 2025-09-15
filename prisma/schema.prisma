@@ -15,6 +15,7 @@ model Student {
   email     String   @unique
   name      String
   progress  Progress[]
+  attempts  Attempt[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
