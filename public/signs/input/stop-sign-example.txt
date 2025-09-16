@@ -20,3 +20,4 @@ This image would automatically:
 3. Be placed in the regulatory folder
 4. Replace the generated CSS visual in the system
 
+

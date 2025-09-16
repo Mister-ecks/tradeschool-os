@@ -67,3 +67,4 @@ console.log(`\n🎉 Created ${sampleImages.length} placeholder images!`);
 console.log(`📁 Location: ${signsDir}`);
 console.log(`\n💡 Replace these with your actual road sign images to see the real signs.`);
 
+

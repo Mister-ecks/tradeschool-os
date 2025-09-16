@@ -272,3 +272,4 @@ console.log(`1. Replace placeholder files with actual images`);
 console.log(`2. Images will automatically appear in the road signs module`);
 console.log(`3. System supports: PNG, JPG, JPEG, GIF, WEBP`);
 
+

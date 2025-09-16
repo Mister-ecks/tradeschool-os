@@ -35,3 +35,4 @@ signs.forEach(sign => {
 
 console.log('Placeholder images created successfully!');
 
+
