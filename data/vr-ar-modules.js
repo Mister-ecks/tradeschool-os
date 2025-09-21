@@ -15,7 +15,7 @@ export const vrArModules = {
           name: "Precision Screwdriver Set",
           barcode: "123456789012",
           qrCode: "laptop-screwdriver-set",
-          image: "/images/tools/screwdriver-set.jpg",
+          // image: "/images/tools/screwdriver-set.jpg", // TODO: Add tool images
           description: "Magnetic precision screwdrivers for laptop repair"
         },
         {
@@ -23,7 +23,7 @@ export const vrArModules = {
           name: "Plastic Spudger",
           barcode: "123456789013",
           qrCode: "laptop-spudger",
-          image: "/images/tools/spudger.jpg",
+          // image: "/images/tools/spudger.jpg", // TODO: Add tool images
           description: "Non-conductive tool for prying and separating components"
         },
         {
@@ -31,7 +31,7 @@ export const vrArModules = {
           name: "Thermal Paste",
           barcode: "123456789014",
           qrCode: "laptop-thermal-paste",
-          image: "/images/tools/thermal-paste.jpg",
+          // image: "/images/tools/thermal-paste.jpg", // TODO: Add tool images
           description: "High-performance thermal compound for CPU/GPU"
         },
         {
@@ -39,7 +39,7 @@ export const vrArModules = {
           name: "Anti-Static Mat",
           barcode: "123456789015",
           qrCode: "laptop-anti-static",
-          image: "/images/tools/anti-static-mat.jpg",
+          // image: "/images/tools/anti-static-mat.jpg", // TODO: Add tool images
           description: "ESD protection mat for safe component handling"
         }
       ],
@@ -97,7 +97,7 @@ export const vrArModules = {
           name: "Pentalobe Screwdriver",
           barcode: "123456789016",
           qrCode: "phone-pentalobe",
-          image: "/images/tools/pentalobe-screwdriver.jpg",
+          // image: "/images/tools/pentalobe-screwdriver.jpg", // TODO: Add tool images
           description: "Specialized screwdriver for iPhone screws"
         },
         {
@@ -105,7 +105,7 @@ export const vrArModules = {
           name: "Suction Cup",
           barcode: "123456789017",
           qrCode: "phone-suction-cup",
-          image: "/images/tools/suction-cup.jpg",
+          // image: "/images/tools/suction-cup.jpg", // TODO: Add tool images
           description: "Tool for lifting phone screens"
         },
         {
@@ -113,7 +113,7 @@ export const vrArModules = {
           name: "Phone Opening Tool",
           barcode: "123456789018",
           qrCode: "phone-opening-tool",
-          image: "/images/tools/opening-tool.jpg",
+          // image: "/images/tools/opening-tool.jpg", // TODO: Add tool images
           description: "Thin tool for separating phone components"
         },
         {
@@ -121,7 +121,7 @@ export const vrArModules = {
           name: "Heat Gun",
           barcode: "123456789019",
           qrCode: "phone-heat-gun",
-          image: "/images/tools/heat-gun.jpg",
+          // image: "/images/tools/heat-gun.jpg", // TODO: Add tool images
           description: "Low-temperature heat gun for adhesive removal"
         }
       ],
@@ -179,7 +179,7 @@ export const vrArModules = {
           name: "Fiber Stripper",
           barcode: "123456789020",
           qrCode: "fiber-stripper",
-          image: "/images/tools/fiber-stripper.jpg",
+          // image: "/images/tools/fiber-stripper.jpg", // TODO: Add tool images
           description: "Precision tool for removing fiber coating"
         },
         {
@@ -187,7 +187,7 @@ export const vrArModules = {
           name: "Fiber Cleaver",
           barcode: "123456789021",
           qrCode: "fiber-cleaver",
-          image: "/images/tools/cleaver.jpg",
+          // image: "/images/tools/cleaver.jpg", // TODO: Add tool images
           description: "Tool for creating clean fiber end faces"
         },
         {
@@ -195,7 +195,7 @@ export const vrArModules = {
           name: "Fusion Splicer",
           barcode: "123456789022",
           qrCode: "fiber-fusion-splicer",
-          image: "/images/tools/fusion-splicer.jpg",
+          // image: "/images/tools/fusion-splicer.jpg", // TODO: Add tool images
           description: "Machine for joining fiber optic cables"
         },
         {
@@ -203,7 +203,7 @@ export const vrArModules = {
           name: "OTDR",
           barcode: "123456789023",
           qrCode: "fiber-otdr",
-          image: "/images/tools/otdr.jpg",
+          // image: "/images/tools/otdr.jpg", // TODO: Add tool images
           description: "Optical Time Domain Reflectometer for testing"
         }
       ],
@@ -261,7 +261,7 @@ export const vrArModules = {
           name: "OTDR Unit",
           barcode: "123456789024",
           qrCode: "otdr-unit",
-          image: "/images/tools/otdr-unit.jpg",
+          // image: "/images/tools/otdr-unit.jpg", // TODO: Add tool images
           description: "Optical Time Domain Reflectometer"
         },
         {
@@ -269,7 +269,7 @@ export const vrArModules = {
           name: "Test Cords",
           barcode: "123456789025",
           qrCode: "otdr-test-cords",
-          image: "/images/tools/test-cords.jpg",
+          // image: "/images/tools/test-cords.jpg", // TODO: Add tool images
           description: "Reference cords for OTDR testing"
         },
         {
@@ -277,7 +277,7 @@ export const vrArModules = {
           name: "Launch Cable",
           barcode: "123456789026",
           qrCode: "otdr-launch-cable",
-          image: "/images/tools/launch-cable.jpg",
+          // image: "/images/tools/launch-cable.jpg", // TODO: Add tool images
           description: "Launch cable for accurate measurements"
         }
       ],

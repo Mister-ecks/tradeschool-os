@@ -23,7 +23,7 @@ export const hvacAdvancedModules = [
           title: 'Gas Piping Materials & Installation',
           description: 'Overview of steel, copper, CSST, and PE piping with installation techniques',
           duration: 15,
-          thumbnail: '/videos/gas-piping-materials-thumbnail.jpg',
+          // thumbnail: '/videos/gas-piping-materials-thumbnail.jpg', // TODO: Add video thumbnails
           chapters: [
             { title: 'Black Iron Steel Pipe', timestamp: 0 },
             { title: 'Copper Tubing Applications', timestamp: 300 },
@@ -36,7 +36,7 @@ export const hvacAdvancedModules = [
           title: 'Combustion Theory & Efficiency',
           description: 'Complete vs incomplete combustion, efficiency calculations, and safety',
           duration: 20,
-          thumbnail: '/videos/combustion-theory-thumbnail.jpg',
+          // thumbnail: '/videos/combustion-theory-thumbnail.jpg', // TODO: Add video thumbnails
           chapters: [
             { title: 'Combustion Triangle', timestamp: 0 },
             { title: 'Complete Combustion Process', timestamp: 400 },
@@ -83,7 +83,7 @@ export const hvacAdvancedModules = [
         {
           id: 'gas-piping-schematic',
           title: 'Gas Piping System Layout',
-          imageUrl: '/diagrams/gas-piping-system.svg',
+          // imageUrl: '/diagrams/gas-piping-system.svg', // TODO: Add diagram images
           labels: [
             { x: 10, y: 20, label: 'Gas Meter', description: 'Point of delivery from utility' },
             { x: 30, y: 20, label: 'Main Shutoff', description: 'Emergency shutoff valve' },

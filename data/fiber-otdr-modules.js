@@ -506,7 +506,7 @@ export const fiberOtdrCourse = {
   instructor: {
     name: 'Sarah Chen',
     title: 'Fiber Optic Master Instructor',
-    avatar: '/instructors/sarah-chen.jpg',
+    // avatar: '/instructors/sarah-chen.jpg', // TODO: Add instructor photos
     experience: '12+ years',
     students: 4500,
     rating: 4.9,

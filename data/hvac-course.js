@@ -19,7 +19,7 @@ export const hvacCourse = [
           title: 'What is HVAC? - 5 Minute Explainer',
           description: 'Animated overview of HVAC systems and their importance in modern buildings',
           duration: 5,
-          thumbnail: '/videos/hvac-explainer-thumbnail.jpg',
+          // thumbnail: '/videos/hvac-explainer-thumbnail.jpg', // TODO: Add video thumbnails
           chapters: [
             { title: 'HVAC Definition', timestamp: 0 },
             { title: 'Main Components', timestamp: 120 },
@@ -32,7 +32,7 @@ export const hvacCourse = [
           title: 'PPE, Tools & Safety Workshop',
           description: 'Hands-on demonstration of PPE usage, tool introduction, and lockout/tagout procedures',
           duration: 10,
-          thumbnail: '/videos/hvac-safety-workshop-thumbnail.jpg',
+          // thumbnail: '/videos/hvac-safety-workshop-thumbnail.jpg', // TODO: Add video thumbnails
           chapters: [
             { title: 'Personal Protective Equipment', timestamp: 0 },
             { title: 'Common HVAC Tools', timestamp: 300 },
@@ -170,7 +170,7 @@ Air In → Furnace/AC → Ducts → Supply Vents → Living Space → Return Ven
         {
           id: 'hvac-system-schematic',
           title: 'Central HVAC System Schematic',
-          imageUrl: '/diagrams/hvac-system-schematic.svg',
+          // imageUrl: '/diagrams/hvac-system-schematic.svg', // TODO: Add diagram images
           labels: [
             { x: 20, y: 30, label: 'Furnace/Heat Exchanger', description: 'Heats or cools incoming air' },
             { x: 50, y: 15, label: 'Supply Ducts', description: 'Distribute conditioned air' },
