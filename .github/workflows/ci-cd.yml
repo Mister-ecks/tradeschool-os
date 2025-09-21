@@ -102,12 +102,13 @@ jobs:
       - name: 🔒 Run Security Audit
         run: npm audit --audit-level=moderate
 
-      - name: 🔍 Run Snyk Security Scan
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
+      # Security scan temporarily disabled - requires SNYK_TOKEN secret
+      # - name: 🔍 Run Snyk Security Scan
+      #   uses: snyk/actions/node@master
+      #   env:
+      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      #   with:
+      #     args: --severity-threshold=high
 
   # 📊 Performance Check
   performance:
