@@ -1,17 +1,10 @@
-import { AdminDashboard } from '@/components/admin/AdminDashboard'
-
-export const metadata = {
-  title: 'Admin Dashboard - TradeSchool OS',
-  description: 'Manage courses, users, and system settings for the TradeSchool OS platform.',
-}
-
 export default function AdminPage() {
-  return <AdminDashboard />
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">Admin Dashboard</h1>
+        <p className="text-gray-600">Admin features are available in the full version.</p>
+      </div>
+    </div>
+  )
 }
-
-
-
-
-
-
-

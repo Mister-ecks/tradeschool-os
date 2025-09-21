@@ -167,7 +167,7 @@ export function NavigationSimple() {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="flex items-center pl-3 pr-4 py-2 text-base font-medium text-purple-600 hover:text-purple-700 hover:bg-purple-50"
                     >
-                      <Shield className="ml-2 w-5 h-5" />
+                      <Shield className="mr-2 w-5 h-5" />
                       Admin Dashboard
                     </Link>
                   )}
@@ -178,7 +178,7 @@ export function NavigationSimple() {
                     }}
                     className="flex items-center pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:text-gray-700 hover:bg-gray-50 w-full text-left"
                   >
-                    <LogOut className="ml-2 w-5 h-5" />
+                    <LogOut className="mr-2 w-5 h-5" />
                     Logout
                   </button>
                 </div>
@@ -189,7 +189,7 @@ export function NavigationSimple() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center pl-3 pr-4 py-2 text-base font-medium text-primary-600 hover:text-primary-700 hover:bg-primary-50"
                   >
-                    <LogIn className="ml-2 w-5 h-5" />
+                    <LogIn className="mr-2 w-5 h-5" />
                     Login
                   </Link>
                   <Link
