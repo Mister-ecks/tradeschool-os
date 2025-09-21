@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Road Sign Images</title>
+</head>
+<body>
+    <h1>Road Sign Image Test</h1>
+    <p>Testing if images load correctly on GitHub Pages</p>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; max-width: 1000px;">
+        <div>
+            <h3>Stop Sign</h3>
+            <img src="/tradeschool-os/signs/stop.png" alt="Stop" style="width: 100px; height: 100px; object-fit: contain; border: 1px solid #ccc;">
+            <p>stop.png</p>
+        </div>
+
+        <div>
+            <h3>Yield</h3>
+            <img src="/tradeschool-os/signs/yield.png" alt="Yield" style="width: 100px; height: 100px; object-fit: contain; border: 1px solid #ccc;">
+            <p>yield.png</p>
+        </div>
+
+        <div>
+            <h3>Speed Limit</h3>
+            <img src="/tradeschool-os/signs/speed-limit-80.png" alt="Speed Limit" style="width: 100px; height: 100px; object-fit: contain; border: 1px solid #ccc;">
+            <p>speed-limit-80.png</p>
+        </div>
+
+        <div>
+            <h3>No Entry</h3>
+            <img src="/tradeschool-os/signs/no-entry.png" alt="No Entry" style="width: 100px; height: 100px; object-fit: contain; border: 1px solid #ccc;">
+            <p>no-entry.png</p>
+        </div>
+
+        <div>
+            <h3>Hospital</h3>
+            <img src="/tradeschool-os/signs/hospital.svg" alt="Hospital" style="width: 100px; height: 100px; object-fit: contain; border: 1px solid #ccc;">
+            <p>hospital.svg</p>
+        </div>
+    </div>
+
+    <script>
+        // Log which images fail to load
+        document.querySelectorAll('img').forEach(img => {
+            img.onload = () => console.log('Loaded:', img.src);
+            img.onerror = () => console.error('Failed to load:', img.src);
+        });
+    </script>
+</body>
+</html>
