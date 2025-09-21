@@ -8,8 +8,14 @@ export default function RoadSignTraining() {
   const [currentSign, setCurrentSign] = useState(0);
 
   useEffect(() => {
-    fetch("/signs.json")
-      .then((res) => res.json())
+    const basePath = process.env.NODE_ENV === 'production' ? '/tradeschool-os' : '';
+    fetch(`${basePath}/signs.json`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((data) => {
         setSigns(data);
         setLoading(false);
@@ -79,7 +85,7 @@ export default function RoadSignTraining() {
           
           <div className="w-64 h-64 mx-auto mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
             <img
-              src={current.image}
+              src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${current.image}`}
               alt={current.name}
               className="w-full h-full object-contain"
               onError={(e) => {

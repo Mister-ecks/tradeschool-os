@@ -9,9 +9,17 @@ export default function RoadSignQuiz() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/signs.json")
-      .then((res) => res.json())
+    // Handle both GitHub Pages and local development
+    const basePath = process.env.NODE_ENV === 'production' ? '/tradeschool-os' : '';
+    fetch(`${basePath}/signs.json`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((data) => {
+        console.log('Signs loaded:', data.length, 'signs');
         setSigns(data);
         setLoading(false);
       })
@@ -141,9 +149,9 @@ export default function RoadSignQuiz() {
                   </span>
                 </div>
                 <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <img 
-                    src={sign.image} 
-                    alt={sign.name} 
+                  <img
+                    src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${sign.image}`}
+                    alt={sign.name}
                     className="w-full h-full object-contain"
                     onError={(e) => {
                       console.log('Image failed to load:', sign.image);
@@ -208,9 +216,9 @@ export default function RoadSignQuiz() {
         <div className="flex flex-col md:flex-row gap-6 mb-6">
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center">
-              <img 
-                src={current.image} 
-                alt={current.name} 
+              <img
+                src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${current.image}`}
+                alt={current.name}
                 className="w-full h-full object-contain"
                 onError={(e) => {
                   console.log('Image failed to load:', current.image);
