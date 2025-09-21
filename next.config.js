@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Conditionally set output for GitHub Pages
-  ...(process.env.GITHUB_PAGES && {
-    output: 'export',
-    trailingSlash: true,
-    images: { unoptimized: true }
-  }),
+  // Enable static export for GitHub Pages
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'out',
   images: {
+    unoptimized: true,
     domains: ['localhost', 'supabase.co', 'youtube.com'],
     formats: ['image/webp', 'image/avif'],
   },
