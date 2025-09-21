@@ -8,7 +8,7 @@ export default function SimpleSignFlashcards() {
 
   useEffect(() => {
     console.log("Fetching signs...");
-    fetch("/signs.json")
+    fetch(`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}/signs.json`)
       .then((res) => {
         console.log("Response status:", res.status);
         if (!res.ok) {

@@ -10,9 +10,11 @@ export default function SignFlashcards() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
-    fetch("/signs.json")
+    const basePath = process.env.NODE_ENV === 'production' ? '/tradeschool-os' : '';
+    fetch(`${basePath}/signs.json`)
       .then((res) => res.json())
-      .then((data) => setSigns(data));
+      .then((data) => setSigns(data))
+      .catch((error) => console.error("Error loading signs:", error));
   }, []);
 
   if (signs.length === 0) {
@@ -118,7 +120,7 @@ export default function SignFlashcards() {
         </div>
         <div className="w-40 h-40 mb-4 flex items-center justify-center bg-gray-100 rounded-lg">
           <img
-            src={currentSign.image}
+            src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${currentSign.image}`}
             alt={currentSign.name}
             className="w-full h-full object-contain"
             onError={(e) => {
