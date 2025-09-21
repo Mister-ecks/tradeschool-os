@@ -8,24 +8,49 @@ export default function RoadSignQuiz() {
   const [mode, setMode] = useState("quiz");
   const [loading, setLoading] = useState(true);
 
+  // Helper function to get the correct image path
+  const getImagePath = (imagePath) => {
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/tradeschool-os' : '';
+    return `${basePath}${imagePath}`;
+  };
+
   useEffect(() => {
     // Handle both GitHub Pages and local development
-    const basePath = process.env.NODE_ENV === 'production' ? '/tradeschool-os' : '';
+    // Check if we're on GitHub Pages by looking at the hostname
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    const basePath = isGitHubPages ? '/tradeschool-os' : '';
+
+    console.log('Loading signs from:', `${basePath}/signs.json`);
     fetch(`${basePath}/signs.json`)
       .then((res) => {
+        console.log('Fetch response status:', res.status, 'URL:', res.url);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         return res.json();
       })
       .then((data) => {
-        console.log('Signs loaded:', data.length, 'signs');
+        console.log('Signs loaded successfully:', data.length, 'signs');
+        console.log('First 3 signs:', data.slice(0, 3));
         setSigns(data);
         setLoading(false);
       })
       .catch((error) => {
         console.error("Error loading signs:", error);
-        setLoading(false);
+        console.error("Will try loading without basePath...");
+        // Fallback: try without basePath
+        fetch('/signs.json')
+          .then((res) => res.json())
+          .then((data) => {
+            console.log('Fallback: Signs loaded:', data.length, 'signs');
+            setSigns(data);
+            setLoading(false);
+          })
+          .catch((fallbackError) => {
+            console.error("Fallback also failed:", fallbackError);
+            setLoading(false);
+          });
       });
   }, []);
 
@@ -150,16 +175,16 @@ export default function RoadSignQuiz() {
                 </div>
                 <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
                   <img
-                    src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${sign.image}`}
+                    src={getImagePath(sign.image)}
                     alt={sign.name}
                     className="w-full h-full object-contain"
                     onError={(e) => {
-                      console.log('Image failed to load:', sign.image);
+                      console.log('Image failed to load:', sign.image, 'Full path:', getImagePath(sign.image));
                       e.target.style.display = 'none';
                       e.target.nextSibling.style.display = 'block';
                     }}
                     onLoad={() => {
-                      console.log('Image loaded successfully:', sign.image);
+                      console.log('Image loaded successfully:', sign.image, 'Full path:', getImagePath(sign.image));
                     }}
                   />
                   <div className="hidden text-center text-gray-500 text-xs">
@@ -217,16 +242,16 @@ export default function RoadSignQuiz() {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center">
               <img
-                src={`${process.env.NODE_ENV === 'production' ? '/tradeschool-os' : ''}${current.image}`}
+                src={getImagePath(current.image)}
                 alt={current.name}
                 className="w-full h-full object-contain"
                 onError={(e) => {
-                  console.log('Image failed to load:', current.image);
+                  console.log('Image failed to load:', current.image, 'Full path:', getImagePath(current.image));
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'block';
                 }}
                 onLoad={() => {
-                  console.log('Image loaded successfully:', current.image);
+                  console.log('Image loaded successfully:', current.image, 'Full path:', getImagePath(current.image));
                 }}
               />
               <div className="hidden text-center text-gray-500">
