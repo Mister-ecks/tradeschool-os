@@ -5,8 +5,11 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
-  basePath: '/tradeschool-os',
-  assetPrefix: '/tradeschool-os',
+  // Only use basePath for production/GitHub Pages
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: '/tradeschool-os',
+    assetPrefix: '/tradeschool-os',
+  }),
   images: {
     unoptimized: true,
     domains: ['localhost', 'supabase.co', 'youtube.com'],
