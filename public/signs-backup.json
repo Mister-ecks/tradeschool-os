@@ -702,47 +702,5 @@
         "answer": "Road ends at T-intersection"
       }
     ]
-  },
-  {
-    "id": "overtaking-prohibited",
-    "category": "Prohibitory",
-    "name": "No Passing",
-    "meaning": "Passing other vehicles is not allowed in this zone.",
-    "image": "/images/Road signs cana/Canada-Prohibitory-Sign-Overtaking-prohibited.png",
-    "quiz": [
-      {
-        "question": "This sign means:",
-        "options": ["No parking", "No passing/overtaking", "No stopping", "Speed limit"],
-        "answer": "No passing/overtaking"
-      }
-    ]
-  },
-  {
-    "id": "railway-crossing-warning",
-    "category": "Warning",
-    "name": "Railway Crossing",
-    "meaning": "Railroad crossing ahead - watch for trains.",
-    "image": "/images/Road signs cana/Canada-Warning-Sign-Warning-for-a-railroad-crossing-without-barriers.png",
-    "quiz": [
-      {
-        "question": "This sign warns of:",
-        "options": ["Railway crossing ahead", "Bridge ahead", "Tunnel ahead", "Construction zone"],
-        "answer": "Railway crossing ahead"
-      }
-    ]
-  },
-  {
-    "id": "steep-descent-warning",
-    "category": "Warning",
-    "name": "Steep Hill",
-    "meaning": "Steep downhill grade ahead, reduce speed and use lower gear.",
-    "image": "/images/Road signs cana/Canada-Warning-Sign-Warning-for-a-steep-descent.png",
-    "quiz": [
-      {
-        "question": "This warning sign indicates:",
-        "options": ["Steep downhill ahead", "Road narrows", "Sharp turn", "Stop ahead"],
-        "answer": "Steep downhill ahead"
-      }
-    ]
   }
 ]
