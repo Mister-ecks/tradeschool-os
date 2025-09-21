@@ -5,6 +5,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
+  basePath: '/tradeschool-os',
+  assetPrefix: '/tradeschool-os',
   images: {
     unoptimized: true,
     domains: ['localhost', 'supabase.co', 'youtube.com'],
